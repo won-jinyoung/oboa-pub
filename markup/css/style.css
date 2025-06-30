@@ -1,0 +1,29 @@
+@import url('https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css');
+
+* { box-sizing: border-box; margin: 0; padding: 0; font: inherit; }
+body { line-height: 1.6; font-family: 'Pretendard', sans-serif; font-size: 14px; color: #111; background: #fff; }
+a { text-decoration: none; color: inherit; }
+.dashboard-wrap { max-width: 1750px; margin: auto; padding: 4rem 2rem; }
+
+.proj-head { margin-bottom: 2rem; font-weight: 600; font-size: 2rem; }
+.proj-head .stat-area { margin-top: 0.5rem; font-size: 1rem; color: #666; }
+.proj-head .btn-toggle-log { margin-top: 1rem; padding: 0.4rem 1rem; background: #000; font-size: 0.9rem; color: #fff; border-radius: 4px; border: none; cursor: pointer; }
+
+.dashboard-cont { display: flex; gap: 2rem; margin-top: 3rem; }
+.dashboard-cont .devlog-box { display: none; width: 240px; padding: 30px; background: #f6f6f6; }
+.dashboard-cont.is-open .devlog-box { display: block; }
+.dashboard-cont .devlog-box h2 { margin-bottom: 1rem; font-size: 1.2rem; }
+.dashboard-cont .devlog-box .log-list { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #ddd; list-style: none; }
+.dashboard-cont .devlog-box .log-list li { margin-bottom: 0.4rem; font-size: 0.9rem; color: #444; }
+.dashboard-cont .devlog-box .log-list li .log { padding-left: 1rem; }
+.dashboard-cont .devlog-box .log-list li .log strong { font-weight: bold; }
+.dashboard-cont .devlog-box .log-list li .log em { font-style: normal; color: #999; }
+
+.table-box { flex: 1; overflow-x: auto; }
+.table-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.table-box thead th { padding: 0.6rem 1.5rem; color: #fff; background: #000; border-bottom: 1px solid #000; text-align: left; }
+.table-box tbody td { padding: 0.6rem 1.5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+.table-box tbody tr.fin { background: #f6f6f6; }
+.table-box tbody td.btns a { display: inline-block; margin-right: 0.1rem; padding: 0.3rem 0.6rem; font-size: 0.8rem; background: #000; color: #fff; border-radius: 4px; }
+.table-box tbody td ul { padding-left: 1rem; }
+.table-box tbody td ul li { list-style: disc; color: #666; }

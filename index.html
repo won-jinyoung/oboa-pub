@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUB DASHBOARD</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="markup/css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="markup/js/ui.js"></script>
+</head>
+
+<body>
+    <div class="dashboard-wrap">
+        <h1 class="proj-head">
+            OBOA 홈페이지 퍼블리싱 작업현황
+            <div class="stat-area">
+                <span class="count-total"></span> 페이지 중
+                <span class="count-fin"></span> 완료
+                <span class="count-percent"></span>%
+            </div>
+        </h1>
+        <div class="dashboard-cont is-open">
+            <aside class="devlog-box">
+                <h2>DevLog</h2>
+                <ul class="log-list">
+                    <li class="date">2025-06-25</li>
+                    <li>
+                        <ul class="log">
+                            <li><strong>메인 마크업</strong><em>업로드</em></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <section class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>메뉴</th>
+                            <th>URL</th>
+                            <th>링크</th>
+                            <th>상태</th>
+                            <th>코멘트</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td>인트로</td>
+                            <td><span class="url">main.html</span></td>
+                            <td class="btns">
+                                <a class="pcBtn" href="pb/main.html" target="_blank">PC</a>
+                                <a class="moBtn" href="pb/main.html">MO</a>
+                            </td>
+                            <td>완료</td>
+                            <td>
+                                <ul>
+                                    <li><strong>[06-25]</strong>업로드</li>
+                                    <li><strong>[06-25]</strong>업로드</li>
+                                    <li><strong>[06-25]</strong>업로드</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
