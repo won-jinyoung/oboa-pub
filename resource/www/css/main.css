@@ -1,1 +1,12 @@
 /********** 공통 **********/
+
+.main-vi { min-height: 100vh; background-color: #000; }
+.main-vi__top {  }
+.main-vi__slogan { display: flex; justify-content: center; gap: 4rem; margin-bottom: 3rem; }
+.main-vi__slogan-line { display: flex; }
+.main-vi__slogan-one { font-family: var(--head-font); font-weight: 700; font-size: 25rem; color: #fff; }
+.main-vi__slogan-icon {  }
+.main-vi__slogan-word { font-family: var(--head-font); font-weight: 700; font-size: 25rem; color: #fff; }
+.main-vi__desc { line-height: 1.5; color: #fff; text-align: center; }
+.main-vi__desc--ko { font-size: 2.4rem; }
+.main-vi__desc--en { font-family: var(--head-font); font-size: 2.2rem; }

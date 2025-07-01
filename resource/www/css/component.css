@@ -15,7 +15,7 @@
 
 :root {
 	/********** font **********/
-	--head-font: "Montserrat";
+	--head-font: "Outfit";
 	--body-font: "Pretendard";
 
 	/********** color **********/
@@ -112,45 +112,14 @@
 
 
 .mx-w-200 { width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; }
-.mx-w-470 { width: 100%; max-width: 470px; margin-left: auto; margin-right: auto; }
-.mx-w-960 { width: 100%; max-width: 960px; margin-left: auto; margin-right: auto; }
-.mx-w-1500 { width: 100%; max-width: 1500px; margin-left: auto; margin-right: auto; }
 
 .mx-h-100 { max-height: 100px; }
-.mx-h-500 { max-height: 500px; }
 
 
 /********** text-style **********/
-.txt-55 { display: block; line-height: 1.4; font-weight: 600; font-size: 5.5rem; word-break: keep-all; }
-.txt-48 { display: block; line-height: 1.4; font-weight: 600; font-size: 4.8rem; word-break: keep-all; }
-.txt-36 { display: block; line-height: 1.4; font-weight: 600; font-size: 3.6rem; word-break: keep-all; }
-.txt-30 { display: block; line-height: 1.4; font-weight: 600; font-size: 3rem; word-break: keep-all; }
-.txt-26 { display: block; line-height: 1.4; font-weight: 600; font-size: 2.6rem; word-break: keep-all; }
-.txt-24 { display: block; line-height: 1.4; font-weight: 600; font-size: 2.4rem; word-break: keep-all; }
-.txt-22 { display: block; line-height: 1.4; font-weight: 600; font-size: 2.2rem; word-break: keep-all; }
-.txt-20 { display: block; line-height: 1.4; font-weight: 600; font-size: 2rem; word-break: keep-all; }
-.txt-18 { display: block; line-height: 1.4; font-weight: 600; font-size: 18px; word-break: keep-all; }
-.txt-17 { display: block; line-height: 1.4; font-weight: 600; font-size: 17px; word-break: keep-all; }
-.txt-16 { display: block; line-height: 1.4; word-break: keep-all; }
-.txt-15 { display: block; line-height: 1.4; font-size: 15px; word-break: keep-all; }
+.txt-55 { display: block; line-height: 1.4; font-size: 5.5rem; word-break: keep-all; }
 
-@media only screen and (max-width: 1023px) {
-	.txt-48 { font-size: 4.5rem; }
-	.txt-36 { font-size: 3.3rem; }
-	.txt-30 { font-size: 2.7rem; }
-	.txt-26 { font-size: 2.3rem; }
-	.txt-22 { font-size: 1.9rem; }
-	.txt-20 { font-size: 18px; }
-	.txt-18 { font-size: 17px; }
-}
-@media only screen and (max-width: 767px) {
-	.txt-48 { font-size: 4rem; }
-	.txt-36 { font-size: 3rem; }
-	.txt-30 { font-size: 2.4rem; }
-	.txt-26 { font-size: 2rem; }
-	.txt-22 { font-size: 18px; }
-	.txt-20 { font-size: 17px; }
-}
+
 
 
 
@@ -167,24 +136,6 @@
 }
 
 .btn-bace1 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; line-height: 1.2; padding: 9px 15px; font-family: "Pretendard"; font-weight: 500; text-align: center; }
-.btn-bace2 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 160px; height: 50px; line-height: 50px; padding: 0 20px; font-family: "Pretendard"; font-weight: 500; font-size: 18px; text-align: center; transition: background 1s; }
-.btn-bace2.bd-000:hover { color: #fff; background: #000; }
-.btn-bace3 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: fit-content; height: 40px; line-height: 40px; padding: 0 15px; font-size: 15px; border-radius: 2px; }
-.btn-bace4 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: fit-content; font-weight: 500; font-size: 17px; }
-.btn-bace4:hover i { animation: shakeX 0.5s ease infinite; }
-@keyframes shakeX {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(4px); }
-  100% { transform: translateX(0); }
-}
-.btn-bace5 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: fit-content; height: 30px; line-height: 30px; padding: 0 15px; font-size: 15px; border-radius: 2px; }
-.btn-bace6 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: fit-content; height: 54px; line-height: 54px; padding: 0 20px; font-weight: 500; font-size: 18px; }
-.list-btn { display: inline-flex; align-items: center; justify-content: center; width: 100px; height: 100px; font-size: 30px; color: #fff; background: #000; }
-
-@media only screen and (max-width: 560px) {
-	.btn-bace2 { font-size: 16px; }
-	.list-btn { width: 60px; height: 60px; font-size: 20px; }
-}
 
 
 

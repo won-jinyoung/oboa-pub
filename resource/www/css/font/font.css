@@ -56,58 +56,59 @@
 
 
 
-/***** Montserrat *****/
+/***** Outfit *****/
 @font-face {
-	font-family:'Montserrat';font-weight:100;font-display:swap;
-	src: url(Montserrat-Thin.woff2) format('woff2'),
-		url(Montserrat-Thin.woff) format('woff'),
-		url(Montserrat-Thin.otf) format('opentype');
+	font-family:'Outfit';font-weight:100;font-display:swap;
+	src: url(Outfit-Thin.woff2) format('woff2'),
+		url(Outfit-Thin.woff) format('woff'),
+		url(Outfit-Thin.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:200;font-display:swap;
-	src: url(Montserrat-ExtraLight.woff2) format('woff2'),
-		url(Montserrat-ExtraLight.woff) format('woff'),
-		url(Montserrat-ExtraLight.otf) format('opentype');
+	font-family:'Outfit';font-weight:200;font-display:swap;
+	src: url(Outfit-ExtraLight.woff2) format('woff2'),
+		url(Outfit-ExtraLight.woff) format('woff'),
+		url(Outfit-ExtraLight.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:300;font-display:swap;
-	src: url(Montserrat-Light.woff2) format('woff2'),
-		url(Montserrat-Light.woff) format('woff'),
-		url(Montserrat-Light.otf) format('opentype');
+	font-family:'Outfit';font-weight:300;font-display:swap;
+	src: url(Outfit-Light.woff2) format('woff2'),
+		url(Outfit-Light.woff) format('woff'),
+		url(Outfit-Light.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:400;font-display:swap;
-	src: url(Montserrat-Regular.woff2) format('woff2'),
-		url(Montserrat-Regular.woff) format('woff'),
-		url(Montserrat-Regular.otf) format('opentype');
+	font-family:'Outfit';font-weight:400;font-display:swap;
+	src: url(Outfit-Regular.woff2) format('woff2'),
+		url(Outfit-Regular.woff) format('woff'),
+		url(Outfit-Regular.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:500;font-display:swap;
-	src: url(Montserrat-Medium.woff2) format('woff2'),
-		url(Montserrat-Medium.woff) format('woff'),
-		url(Montserrat-Medium.otf) format('opentype');
+	font-family:'Outfit';font-weight:500;font-display:swap;
+	src: url(Outfit-Medium.woff2) format('woff2'),
+		url(Outfit-Medium.woff) format('woff'),
+		url(Outfit-Medium.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:600;font-display:swap;
-	src: url(Montserrat-SemiBold.woff2) format('woff2'),
-		url(Montserrat-SemiBold.woff) format('woff'),
-		url(Montserrat-SemiBold.otf) format('opentype');
+	font-family:'Outfit';font-weight:600;font-display:swap;
+	src: url(Outfit-SemiBold.woff2) format('woff2'),
+		url(Outfit-SemiBold.woff) format('woff'),
+		url(Outfit-SemiBold.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:700;font-display:swap;
-	src: url(Montserrat-Bold.woff2) format('woff2'),
-		url(Montserrat-Bold.woff) format('woff'),
-		url(Montserrat-Bold.otf) format('opentype');
+	font-family:'Outfit';font-weight:700;font-display:swap;
+	src: url(Outfit-Bold.woff2) format('woff2'),
+		url(Outfit-Bold.woff) format('woff'),
+		url(Outfit-Bold.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:800;font-display:swap;
-	src: url(Montserrat-ExtraBold.woff2) format('woff2'),
-		url(Montserrat-ExtraBold.woff) format('woff'),
-		url(Montserrat-ExtraBold.otf) format('opentype');
+	font-family:'Outfit';font-weight:800;font-display:swap;
+	src: url(Outfit-ExtraBold.woff2) format('woff2'),
+		url(Outfit-ExtraBold.woff) format('woff'),
+		url(Outfit-ExtraBold.otf) format('opentype');
 }
 @font-face {
-	font-family:'Montserrat';font-weight:900;font-display:swap;
-	src: url(Montserrat-Black.woff2) format('woff2'),
-		url(Montserrat-Black.woff) format('woff'),
-		url(Montserrat-Black.otf) format('opentype');
+	font-family:'Outfit';font-weight:900;font-display:swap;
+	src: url(Outfit-Black.woff2) format('woff2'),
+		url(Outfit-Black.woff) format('woff'),
+		url(Outfit-Black.otf) format('opentype');
 }
+
