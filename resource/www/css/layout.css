@@ -3,7 +3,7 @@
 
 body { overflow-x: hidden; }
 #wrap { overflow-x: hidden; }
-.inner-padding { max-width: 100%; padding: 0 34px; }
+.inner-padding { width: 100%; max-width: 100%; padding: 0 34px; }
 
 .header { position: fixed; top: 0; left: 0; z-index: 1; width: 100%; padding: 15px 0; }
 .header__inner-padding { display: flex; justify-content: space-between; align-items: center; }
@@ -20,3 +20,20 @@ body { overflow-x: hidden; }
 .header__util .header__btn { display: block; height: 36px; line-height: 36px; padding: 0 15px; font-family: var(--head-font); font-weight: 500; font-size: 16px; border-radius: 50px; }
 .header__util .header__lang-btn { display: flex; align-items: center; gap: 3px; line-height: 34px; color: #fff; border: 2px solid #fff; }
 .header__util .header__contact-btn { color: #000; background-color: #fff; }
+
+
+.footer { padding: 15rem 0 5rem; }
+.footer__top { display: flex; }
+.footer__left { width: 50%; padding-right: 2rem; }
+.footer__title { display: block; font-family: var(--head-font); font-weight: 500; font-size: 16rem; }
+.footer__right { width: 50%; }
+.footer__label { display: block; margin-bottom: 30px; font-family: var(--head-font); font-weight: 400; font-size: 6.5rem; }
+.footer__info { display: block; margin-bottom: 10px; font-family: var(--head-font); font-weight: 300; font-size: 3rem; }
+.footer__family { position: relative; width: fit-content; }
+.footer__family-btn { display: flex; align-items: center; gap: 10px; height: 45px; line-height: 43px; margin-top: 30px; padding: 0 20px; font-family: var(--head-font); font-size: 2rem; border: 2px solid #000; border-radius: 50px; }
+.footer__family-list { display: none; position: absolute; top: 43px; left: 0; width: 100%; padding: 20px; border: 2px solid #000; border-radius: 20px; }
+.footer__family-list li {  }
+.footer__family-list li + li { margin-top: 5px; }
+.footer__family-list a { display: block; line-height: 1.5; font-size: 16px; }
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 50px; }
+.footer__bottom small { font-family: var(--head-font); font-weight: 300; font-size: 16px; }

@@ -12,9 +12,12 @@
 .sec__tit--st1 { line-height: 1; font-weight: 500; font-size: 12rem; }
 .sec__tit--st2 { line-height: 1; font-weight: 500; font-size: 4.8rem; }
 .sec__tit--st3 { display: flex; gap: 20px; line-height: 1.2; font-weight: 400; font-size: 5rem; }
+.sec__tit--st4 { display: flex; gap: 20px; line-height: 1.2; font-weight: 500; font-size: 9rem; }
 .sec__tit--st6 { font-weight: 500; font-size: 20rem; color: #fff; white-space: nowrap; }
 
-.sec__desc { display: block; line-height: 1.5; font-size: 2rem; color: #999; }
+.sec__desc { display: block; line-height: 1.5;  }
+.sec__desc--st1 { font-size: 2rem; color: #999; }
+.sec__desc--st2 { font-family: var(--head-font); font-weight: 400; font-size: 3rem; color: #fff; }
 
 .more-btn { display: inline-flex; align-items: center; gap: 20px; padding: 8px 8px 8px 20px; font-family: var(--head-font); font-size: 1.8rem; border-radius: 50px; letter-spacing: 0px; }
 .more-btn i { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 100%; }
@@ -22,6 +25,9 @@
 .more-btn--dark i { background: #000; }
 .more-btn--light { color: #fff; background: var(--white10); border: 1px solid var(--white15); backdrop-filter: blur(5px); }
 .more-btn--light i { background: #fff; }
+
+.video { width: 100%; height: 100%; object-fit: cover; }
+
 
 /********** 메인 비주얼 **********/
 .main-vi { height: 100vh; padding: 10rem 0; background-color: #000; }
@@ -53,13 +59,13 @@
 /********** visual **********/
 .section.visual { height: 600px; padding: 0; }
 .visual__media { width: 100%; height: 100%; }
-.visual__video { width: 100%; height: 100%; object-fit: cover; }
 
 
 /********** marquee **********/
 .marquee { padding: 5rem 3rem; }
 .marquee__inner { display: flex; align-items: center; padding: 6rem 1rem; border-radius: 2rem; }
 .marquee__inner--st1 { background: linear-gradient(100deg, #D7DBE5 3.83%, #B4C3D6 35.79%, #A8AFCA 52.66%, #D4C6DB 68.2%, #E5E7EB 96.17%); }
+.marquee__inner--st2 { background: var(--gradient1, linear-gradient(100deg, #A9CCEE 3.83%, #BFA7D0 64.26%, #DFC0C1 96.17%)); }
 .marquee__list { flex-shrink: 0; display: flex; align-items: center; gap: 3rem; }
 .marquee__item { position: relative; display: inline-flex; align-items: center; gap: 3rem; font-family: var(--head-font); font-weight: 500; font-size: 4.5rem; color: var(--white70); }
 .marquee__item::after { content:""; display: block; width: 7px; height: 7px; background: var(--white70); border-radius: 100%; }
@@ -68,20 +74,55 @@
 .ai__inner-padding { display: flex; }
 .ai__body { display: flex; justify-content: space-between; }
 .ai__media { width: 450px; height: 310px; border-radius: 1rem; overflow: hidden; }
-.ai__video { display: block; width: 100%; height: 100%; object-fit: cover; }
-.ai__more-btn { margin-top: 30px; }
 
 /********** studio **********/
 .studio { position: relative; text-align: center; }
 .studio__media { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;  }
-.studio__video { position: relative; width: 100%; height: 100%; object-fit: cover; }
-.studio__tit { margin: 30px 0; mix-blend-mode: difference; }
+.studio__tit { mix-blend-mode: difference; }
 
 /********** commerce **********/
 .commerce {  }
 .commerce__inner-padding { position: relative; height: 100vh; }
-.commerce__tit { margin: 30px 0; mix-blend-mode: difference; }
-.commerce__right { text-align: right; }
+.commerce__tit--black { position: relative; z-index: 1; }
+.commerce__tit--white { position: absolute; top: 0; right: 0; z-index: 2; color: #fff; clip-path: polygon(-0.11% 2px, 7.04% 3px, 7.04% 100.41%, 0.03% 100.42%); }
+.commerce__right { position: relative; text-align: right; }
 .commerce__center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .commerce__media { width: 530px; height: 600px; }
-.commerce__video { width: 100%; height: 100%; object-fit: cover; }
+
+/********** education **********/
+.education { position: relative; display: flex; align-items: flex-end; min-height: 700px; }
+.education__tit { color: #fff; mix-blend-mode: difference; }
+.education__media { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; }
+
+/********** project **********/
+.project { text-align: center; }
+
+/********** review **********/
+.review { min-height: 100vh; background: linear-gradient(100deg, #A9CCEE 3.83%, #BFA7D0 64.26%, #DFC0C1 96.17%); }
+
+/********** vision **********/
+.vision { position: relative; min-height: 100vh; }
+.vision__media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; }
+.vision__video { opacity: .3; }
+
+/********** skill **********/
+.skill { position: relative; min-height: 100vh; text-align: center; }
+.skill__tit { margin: 50px 0; color: #fff; }
+.skill__media { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background-color: #000; }
+.skill__video { opacity: .6; }
+.skill__stack { position: absolute; bottom: 0; }
+.skill__item { display: inline-flex; align-items: center; gap: 10px; padding: 8px 26px 8px 8px; font-family: var(--head-font); font-weight: 400; font-size: 2.2rem; color: #fff; background-color: #222; border-radius: 50px; box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25); backdrop-filter: blur(2px); }
+.skill__item i { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #000; border-radius: 100%; }
+.skill__item i img { max-width: 30px; }
+
+/********** notice **********/
+.notice__inner-padding { display: flex; }
+.notice__list {  }
+.notice__item { display: flex; margin-bottom: 50px; padding-bottom: 50px; border-bottom: 1px solid var(--gray-e5); }
+.notice__date { flex-shrink: 0; width: 120px; }
+.notice__date span { display: block; font-family: var(--head-font); font-weight: 600; font-size: 14px; color: #999; }
+.notice__date em { display: block; font-family: var(--head-font); font-weight: 700; font-size: 4.8rem; }
+.notice__text { flex-grow: 1; width: calc(100% - 120px); margin: 2px 0; }
+.notice__text strong { display: block; line-height: 1.2; font-weight: 600; font-size: 2.4rem; }
+.notice__text p { line-height: 1.3; margin: 20px 0; font-size: 1.8rem; }
+.notice__text a { font-family: var(--head-font); font-weight: 600; font-size: 14px; }
