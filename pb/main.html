@@ -31,7 +31,11 @@
 	<script src="../resource/www/js/plugins/bootstrap.bundle.min.js"></script>
 	<script src="../resource/www/js/plugins/swiper-bundle.min.js"></script>
 	<script src="../resource/www/js/plugins/lenis.min.js"></script>
+	<script src="../resource/www/js/plugins/gsap.min.js"></script>
+	<script src="../resource/www/js/plugins/ScrollTrigger.js"></script>
+	<script src="../resource/www/js/plugins/SplitText.min.js"></script>
 	<script src="../resource/www/js/plugins/aos.js"></script>
+	<script src="../resource/www/js/plugins/countUp.umd.js"></script>
 	<script src="../resource/www/js/common.js"></script>
 	<!-- //script -->
 </head>
@@ -65,7 +69,8 @@
 				<div class="header__util">
 					<div class="header__lang">
 						<a href="#none" class="header__btn header__lang-btn">
-							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M14 8C14 9.5913 13.3679 11.1174 12.2426 12.2426C11.1174 13.3679 9.5913 14 8 14M14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2M14 8H2M8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8M8 14C9.10467 14 10 11.3133 10 8C10 4.68667 9.10467 2 8 2M8 14C6.89533 14 6 11.3133 6 8C6 4.68667 6.89533 2 8 2M8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8"
 									stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -118,7 +123,8 @@
 									xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M9.663 17.5H14.336M12 3.5V4.5M18.364 6.136L17.657 6.843M21 12.5H20M4 12.5H3M6.343 6.843L5.636 6.136M8.464 16.036C7.76487 15.3367 7.2888 14.4458 7.09598 13.4759C6.90316 12.506 7.00225 11.5008 7.38073 10.5872C7.75921 9.67366 8.40007 8.89284 9.22229 8.34349C10.0445 7.79414 11.0111 7.50093 12 7.50093C12.9889 7.50093 13.9555 7.79414 14.7777 8.34349C15.5999 8.89284 16.2408 9.67366 16.6193 10.5872C16.9977 11.5008 17.0968 12.506 16.904 13.4759C16.7112 14.4458 16.2351 15.3367 15.536 16.036L14.988 16.583C14.6747 16.8963 14.4262 17.2683 14.2567 17.6777C14.0872 18.0871 13.9999 18.5259 14 18.969V19.5C14 20.0304 13.7893 20.5391 13.4142 20.9142C13.0391 21.2893 12.5304 21.5 12 21.5C11.4696 21.5 10.9609 21.2893 10.5858 20.9142C10.2107 20.5391 10 20.0304 10 19.5V18.969C10 18.074 9.644 17.215 9.012 16.583L8.464 16.036Z"
-										stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										stroke="white" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
 								</svg>
 							</i>
 							Our Philosophy
@@ -149,19 +155,19 @@
 					<div class="sec__body">
 						<ul class="achieve__list">
 							<li class="achieve__item">
-								<p class="achieve__value">15+</p>
+								<p class="achieve__value" id="count01">15+</p>
 								<p class="achieve__desc">(Professional Experience)</p>
 							</li>
 							<li class="achieve__item">
-								<p class="achieve__value">400+</p>
+								<p class="achieve__value" id="count02">400+</p>
 								<p class="achieve__desc">(Projects Completed)</p>
 							</li>
 							<li class="achieve__item">
-								<p class="achieve__value">15+</p>
+								<p class="achieve__value" id="count03">15+</p>
 								<p class="achieve__desc">(Professional Experience)</p>
 							</li>
 							<li class="achieve__item">
-								<p class="achieve__value">4.9</p>
+								<p class="achieve__value" id="count04">4.9</p>
 								<p class="achieve__desc">(Satisfaction Rate)</p>
 							</li>
 						</ul>
@@ -223,7 +229,8 @@
 						<div>
 							<h2 class="sec__tit sec__tit--st3">We build emotionally intelligent AI that</h2>
 							<h2 class="sec__tit sec__tit--st3">speaks, feels, and responds. From voice to</h2>
-							<h2 class="sec__tit sec__tit--st3">emotion to music, <picture><img src="../resource/www/img/main/img_ai.png" alt=""></picture> your brand</h2>
+							<h2 class="sec__tit sec__tit--st3">emotion to music, <picture class="ai__image-mask"><img
+										src="../resource/www/img/main/img_ai.png" alt=""></picture> your brand</h2>
 							<h2 class="sec__tit sec__tit--st3">becomes interactive.</h2>
 							<a href="#none" class="more-btn more-btn--dark ai__more-btn mt30">
 								<span>Learn more</span>
@@ -232,7 +239,8 @@
 										xmlns="http://www.w3.org/2000/svg">
 										<path
 											d="M8.16667 2.91675L12.25 7.00008M12.25 7.00008L8.16667 11.0834M12.25 7.00008H1.75"
-											stroke="white" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" />
+											stroke="white" stroke-width="1.5px" stroke-linecap="round"
+											stroke-linejoin="round" />
 									</svg>
 								</i>
 							</a>
@@ -259,7 +267,8 @@
 					</i>
 					OBOA Studio
 				</h3>
-				<h2 class="sec__tit sec__tit--st6 studio__tit mt30 mb30">End-to-End Web, App, and System Development</h2>
+				<h2 class="sec__tit sec__tit--st6 studio__tit mt30 mb30">End-to-End Web, App, and System Development
+				</h2>
 				<a href="#none" class="more-btn more-btn--light">
 					<span>Learn more</span>
 					<i>
@@ -273,7 +282,7 @@
 					<video class="studio__video video" autoplay muted loop playsinline>
 						<source src="../resource/www/img/main/video_studio.mp4" type="video/mp4" />
 					</video>
-				</div>	
+				</div>
 			</section>
 			<!-- E:studio -->
 
@@ -303,8 +312,9 @@
 						</div>
 					</div>
 					<div class="commerce__right">
-						<h2 class="sec__tit sec__tit--st1 commerce__tit commerce__tit--black">Recommends<br>and Scales</h2>
-						<h2 class="sec__tit sec__tit--st1 commerce__tit commerce__tit--white">Recommends<br>and Scales</h2>
+						<!-- <h2 class="sec__tit sec__tit--st1 commerce__tit commerce__tit--black">Recommends<br>and Scales</h2> -->
+						<h2 class="sec__tit sec__tit--st1 commerce__tit commerce__tit--white">Recommends<br>and Scales
+						</h2>
 						<a href="#none" class="more-btn more-btn--dark mt30">
 							<span>Learn more</span>
 							<i>
@@ -312,9 +322,8 @@
 									xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M8.16667 2.91675L12.25 7.00008M12.25 7.00008L8.16667 11.0834M12.25 7.00008H1.75"
-										stroke="white" 
-										stroke-width="1.5px"
-										stroke-linecap="round" stroke-linejoin="round" />
+										stroke="white" stroke-width="1.5px" stroke-linecap="round"
+										stroke-linejoin="round" />
 								</svg>
 							</i>
 						</a>
@@ -338,8 +347,10 @@
 						</i>
 						OBOA Education
 					</h3>
-					<h2 class="sec__tit sec__tit--st4 education__tit mt30 mb30">We train founders to launch <br> real AI businesses—no coding
-						required.</h2>
+					<h2 class="sec__tit sec__tit--st4 education__tit mt30 mb30">
+						We train founders to launch<br>
+						real AI businesses—no coding required.
+					</h2>
 					<a href="#none" class="more-btn more-btn--light">
 						<span>Learn more</span>
 						<i>
@@ -347,10 +358,18 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M8.16667 2.91675L12.25 7.00008M12.25 7.00008L8.16667 11.0834M12.25 7.00008H1.75"
-									stroke="black" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" />
+									stroke="black" stroke-width="1.5px" stroke-linecap="round"
+									stroke-linejoin="round" />
 							</svg>
 						</i>
 					</a>
+				</div>
+				<div class="split">
+					<div class="bx"></div>
+					<div class="bx"></div>
+					<div class="bx"></div>
+					<div class="bx"></div>
+					<div class="bx"></div>
 				</div>
 				<div class="education__media">
 					<video class="education__video video" autoplay muted loop playsinline>
@@ -383,7 +402,8 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M8.16667 2.91675L12.25 7.00008M12.25 7.00008L8.16667 11.0834M12.25 7.00008H1.75"
-									stroke="white" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" />
+									stroke="white" stroke-width="1.5px" stroke-linecap="round"
+									stroke-linejoin="round" />
 							</svg>
 						</i>
 					</a>
@@ -427,56 +447,172 @@
 
 			<!-- S:review -->
 			<section class="section review">
-				<h3 class="sec__label sec__label--light">
-					<i>
-						<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M7.94444 11.7498H7.95333M11.5 11.7498H11.5089M15.0556 11.7498H15.0644M19.5 11.7498C19.5 15.6769 15.9178 18.8609 11.5 18.8609C10.1921 18.8653 8.89981 18.5771 7.71778 18.0173L3.5 18.8609L4.74 15.5542C3.95511 14.4538 3.5 13.1489 3.5 11.7498C3.5 7.82267 7.08222 4.63867 11.5 4.63867C15.9178 4.63867 19.5 7.82267 19.5 11.7498Z"
-								stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-						</svg>
-					</i>
-					OBOA Review
-				</h3>
-				<h2 class="sec__tit sec__tit--st5">The default AI partner <br> for the next generation <br> of founders.
-				</h2>
-				<div class="review__list">
-					<div class="review__swiper swiper">
-						<div class="swiper-wrapper">
-							<div class="review__item swiper-slide">
-								<strong class="review__job">이커머스 마케팅 담당자</strong>
-								<svg width="27" height="24" viewBox="0 0 27 24" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0 0V12.4452H7.25326C7.15469 13.8671 6.75022 16.2641 5.21392 17.9128C4.00731 19.2061 2.30106 19.8358 0 19.8358V24C3.48048 24 6.26418 22.9065 8.27633 20.7499C10.7643 18.0821 11.4883 14.4596 11.5971 12.4486V0.00338553H0V0Z"
-										fill="white" />
-									<path
-										d="M15.0786 0V12.4452H22.3319C22.2333 13.8671 21.8288 16.2641 20.2925 17.9128C19.0859 19.2061 17.3797 19.8358 15.0786 19.8358V24C18.5591 24 21.3428 22.9065 23.3549 20.7499C25.8429 18.0821 26.5669 14.4596 26.6757 12.4486V0.00338553H15.0752L15.0786 0Z"
-										fill="white" />
-								</svg>
-								<p class="review__text">브랜드몰 구축 과정에서 기획부터 정산·배송 자동화까지 전체 구조를 함께 정리해주며 실질적인 비즈니스 개선이
-									이루어졌습니다. 프로젝트 이후에도 운영이 안정적으로 이어지고 있습니다.</p>
-								<div class="review__author">
-									<picture>
-										<img src="" alt="">
-									</picture>
-									<span>s***lee</span>
+				<div class="review__main">
+					<div class="review__list">
+						<div class="review__swiper swiper">
+							<div class="swiper-wrapper">
+								<div class="review__item swiper-slide">
+									<div class="inner">
+										<strong class="review__job">이커머스 마케팅 담당자</strong>
+										<div>
+											<svg class="mb30" width="27" height="24" viewBox="0 0 27 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M0 0V12.4452H7.25326C7.15469 13.8671 6.75022 16.2641 5.21392 17.9128C4.00731 19.2061 2.30106 19.8358 0 19.8358V24C3.48048 24 6.26418 22.9065 8.27633 20.7499C10.7643 18.0821 11.4883 14.4596 11.5971 12.4486V0.00338553H0V0Z"
+													fill="white" />
+												<path
+													d="M15.0786 0V12.4452H22.3319C22.2333 13.8671 21.8288 16.2641 20.2925 17.9128C19.0859 19.2061 17.3797 19.8358 15.0786 19.8358V24C18.5591 24 21.3428 22.9065 23.3549 20.7499C25.8429 18.0821 26.5669 14.4596 26.6757 12.4486V0.00338553H15.0752L15.0786 0Z"
+													fill="white" />
+											</svg>
+											<p class="review__text">브랜드몰 구축 과정에서 기획부터 정산·배송 자동화까지 전체 구조를 함께 정리해주며 실질적인
+												비즈니스
+												개선이
+												이루어졌습니다. <br> 프로젝트 이후에도 운영이 안정적으로 이어지고 있습니다.</p>
+										</div>
+										<div class="review__author">
+											<picture>
+												<img src="../resource/www/img/main/img_review-prof.png" alt="">
+											</picture>
+											<span>s***lee</span>
+										</div>
+									</div>
+								</div>
+								<div class="review__item swiper-slide">
+									<div class="inner">
+										<strong class="review__job">이커머스 마케팅 담당자</strong>
+										<div>
+											<svg class="mb30" width="27" height="24" viewBox="0 0 27 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M0 0V12.4452H7.25326C7.15469 13.8671 6.75022 16.2641 5.21392 17.9128C4.00731 19.2061 2.30106 19.8358 0 19.8358V24C3.48048 24 6.26418 22.9065 8.27633 20.7499C10.7643 18.0821 11.4883 14.4596 11.5971 12.4486V0.00338553H0V0Z"
+													fill="white" />
+												<path
+													d="M15.0786 0V12.4452H22.3319C22.2333 13.8671 21.8288 16.2641 20.2925 17.9128C19.0859 19.2061 17.3797 19.8358 15.0786 19.8358V24C18.5591 24 21.3428 22.9065 23.3549 20.7499C25.8429 18.0821 26.5669 14.4596 26.6757 12.4486V0.00338553H15.0752L15.0786 0Z"
+													fill="white" />
+											</svg>
+											<p class="review__text">브랜드몰 구축 과정에서 기획부터 정산·배송 자동화까지 전체 구조를 함께 정리해주며 실질적인
+												비즈니스
+												개선이
+												이루어졌습니다. <br> 프로젝트 이후에도 운영이 안정적으로 이어지고 있습니다.</p>
+										</div>
+										<div class="review__author">
+											<picture>
+												<img src="../resource/www/img/main/img_review-prof.png" alt="">
+											</picture>
+											<span>s***lee</span>
+										</div>
+									</div>
+								</div>
+								<div class="review__item swiper-slide">
+									<div class="inner">
+										<strong class="review__job">이커머스 마케팅 담당자</strong>
+										<div>
+											<svg class="mb30" width="27" height="24" viewBox="0 0 27 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M0 0V12.4452H7.25326C7.15469 13.8671 6.75022 16.2641 5.21392 17.9128C4.00731 19.2061 2.30106 19.8358 0 19.8358V24C3.48048 24 6.26418 22.9065 8.27633 20.7499C10.7643 18.0821 11.4883 14.4596 11.5971 12.4486V0.00338553H0V0Z"
+													fill="white" />
+												<path
+													d="M15.0786 0V12.4452H22.3319C22.2333 13.8671 21.8288 16.2641 20.2925 17.9128C19.0859 19.2061 17.3797 19.8358 15.0786 19.8358V24C18.5591 24 21.3428 22.9065 23.3549 20.7499C25.8429 18.0821 26.5669 14.4596 26.6757 12.4486V0.00338553H15.0752L15.0786 0Z"
+													fill="white" />
+											</svg>
+											<p class="review__text">브랜드몰 구축 과정에서 기획부터 정산·배송 자동화까지 전체 구조를 함께 정리해주며 실질적인
+												비즈니스
+												개선이
+												이루어졌습니다. <br> 프로젝트 이후에도 운영이 안정적으로 이어지고 있습니다.</p>
+										</div>
+										<div class="review__author">
+											<picture>
+												<img src="../resource/www/img/main/img_review-prof.png" alt="">
+											</picture>
+											<span>s***lee</span>
+										</div>
+									</div>
+								</div>
+								<div class="review__item swiper-slide">
+									<div class="inner">
+										<strong class="review__job">이커머스 마케팅 담당자</strong>
+										<div>
+											<svg class="mb30" width="27" height="24" viewBox="0 0 27 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M0 0V12.4452H7.25326C7.15469 13.8671 6.75022 16.2641 5.21392 17.9128C4.00731 19.2061 2.30106 19.8358 0 19.8358V24C3.48048 24 6.26418 22.9065 8.27633 20.7499C10.7643 18.0821 11.4883 14.4596 11.5971 12.4486V0.00338553H0V0Z"
+													fill="white" />
+												<path
+													d="M15.0786 0V12.4452H22.3319C22.2333 13.8671 21.8288 16.2641 20.2925 17.9128C19.0859 19.2061 17.3797 19.8358 15.0786 19.8358V24C18.5591 24 21.3428 22.9065 23.3549 20.7499C25.8429 18.0821 26.5669 14.4596 26.6757 12.4486V0.00338553H15.0752L15.0786 0Z"
+													fill="white" />
+											</svg>
+											<p class="review__text">브랜드몰 구축 과정에서 기획부터 정산·배송 자동화까지 전체 구조를 함께 정리해주며 실질적인
+												비즈니스
+												개선이
+												이루어졌습니다. <br> 프로젝트 이후에도 운영이 안정적으로 이어지고 있습니다.</p>
+										</div>
+										<div class="review__author">
+											<picture>
+												<img src="../resource/www/img/main/img_review-prof.png" alt="">
+											</picture>
+											<span>s***lee</span>
+										</div>
+									</div>
+								</div>
+								<div class="review__item swiper-slide">
+									<div class="inner">
+										<strong class="review__job">이커머스 마케팅 담당자</strong>
+										<div>
+											<svg class="mb30" width="27" height="24" viewBox="0 0 27 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M0 0V12.4452H7.25326C7.15469 13.8671 6.75022 16.2641 5.21392 17.9128C4.00731 19.2061 2.30106 19.8358 0 19.8358V24C3.48048 24 6.26418 22.9065 8.27633 20.7499C10.7643 18.0821 11.4883 14.4596 11.5971 12.4486V0.00338553H0V0Z"
+													fill="white" />
+												<path
+													d="M15.0786 0V12.4452H22.3319C22.2333 13.8671 21.8288 16.2641 20.2925 17.9128C19.0859 19.2061 17.3797 19.8358 15.0786 19.8358V24C18.5591 24 21.3428 22.9065 23.3549 20.7499C25.8429 18.0821 26.5669 14.4596 26.6757 12.4486V0.00338553H15.0752L15.0786 0Z"
+													fill="white" />
+											</svg>
+											<p class="review__text">브랜드몰 구축 과정에서 기획부터 정산·배송 자동화까지 전체 구조를 함께 정리해주며 실질적인
+												비즈니스
+												개선이
+												이루어졌습니다. <br> 프로젝트 이후에도 운영이 안정적으로 이어지고 있습니다.</p>
+										</div>
+										<div class="review__author">
+											<picture>
+												<img src="../resource/www/img/main/img_review-prof.png" alt="">
+											</picture>
+											<span>s***lee</span>
+										</div>
+									</div>
 								</div>
 							</div>
+							<div class="review__pagination"></div>
 						</div>
-						<div class="review__pagination swiper-pagination"></div>
 					</div>
-				</div>
-				<div class="review__phone-wrap">
-					<picture>
-						<img src="../resource/www/img/main/img_review-phone-mockup.png" alt="">
-					</picture>
+					<div class="review__phone-wrap">
+						<div class="review__phone__text">
+							<h3 class="sec__label sec__label--light">
+								<i>
+									<svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M7.94444 11.7498H7.95333M11.5 11.7498H11.5089M15.0556 11.7498H15.0644M19.5 11.7498C19.5 15.6769 15.9178 18.8609 11.5 18.8609C10.1921 18.8653 8.89981 18.5771 7.71778 18.0173L3.5 18.8609L4.74 15.5542C3.95511 14.4538 3.5 13.1489 3.5 11.7498C3.5 7.82267 7.08222 4.63867 11.5 4.63867C15.9178 4.63867 19.5 7.82267 19.5 11.7498Z"
+											stroke="white" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</i>
+								OBOA Review
+							</h3>
+							<h2 class="sec__tit sec__tit--st3 review__tit">The default AI partner <br>for the next
+								generation <br> of founders.</h2>
+						</div>
+						<picture>
+							<img src="../resource/www/img/main/img_review-phone-mockup.svg" alt="">
+						</picture>
+					</div>
 				</div>
 				<div class="review__bg">
-					<div class="review__obj review__obj--left">
-						<img src="../resource/www/img/main/img_review-obj01.png" alt="">
-					</div>
 					<div class="review__obj review__obj--right">
-
+						<img src="../resource/www/img/main/img_review-obj01.svg" alt="">
+					</div>
+					<div class="review__obj review__obj--left">
+						<img src="../resource/www/img/main/img_review-obj02.svg" alt="">
 					</div>
 				</div>
 			</section>
@@ -484,23 +620,32 @@
 
 			<!-- S:vision -->
 			<section class="section vision">
-				<h2 class="sec__tit sec__tit--st5">AI is real – Build smarter brands, <br> not just digital ones.</h2>
-				<div class="vision__bg">
+				<div class="inner-padding">
+					<h2 class="sec__tit sec__tit--st3 vision__tit">AI is real – Build smarter brands, <br> not just
+						digital ones.</h2>
+				</div>
+				<div class="vision__circle">
 					<div class="vision__center">
-						<img src="" alt="" />
+						<img src="../resource/www/img/main/img_vision.svg" alt="" />
 					</div>
 					<div class="vision__track vision__track--1">
 						<div class="vision__item"><img src="../resource/www/img/main/icn_vision01.svg" alt="" /></div>
 						<div class="vision__item"><img src="../resource/www/img/main/icn_vision02.svg" alt="" /></div>
+						<div class="vision__item"><img src="../resource/www/img/main/icn_vision07.svg" alt="" /></div>
 					</div>
 					<div class="vision__track vision__track--2">
 						<div class="vision__item"><img src="../resource/www/img/main/icn_vision03.svg" alt="" /></div>
 						<div class="vision__item"><img src="../resource/www/img/main/icn_vision04.svg" alt="" /></div>
+						<div class="vision__item"><img src="../resource/www/img/main/icn_vision08.svg" alt="" /></div>
 					</div>
 					<div class="vision__track vision__track--3">
 						<div class="vision__item"><img src="../resource/www/img/main/icn_vision05.svg" alt="" /></div>
 						<div class="vision__item"><img src="../resource/www/img/main/icn_vision06.svg" alt="" /></div>
+						<div class="vision__item"><img src="../resource/www/img/main/icn_vision09.svg" alt="" /></div>
 					</div>
+				</div>
+				<div class="vision__gradient">
+					<img src="../resource/www/img/main/bg_vision.png" alt="">
 				</div>
 				<div class="vision__media">
 					<video class="vision__video video" autoplay muted loop playsinline>
@@ -583,7 +728,8 @@
 									xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M8.16667 2.91675L12.25 7.00008M12.25 7.00008L8.16667 11.0834M12.25 7.00008H1.75"
-										stroke="white"  stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" />
+										stroke="white" stroke-width="1.5px" stroke-linecap="round"
+										stroke-linejoin="round" />
 								</svg>
 							</i>
 						</a>
@@ -651,9 +797,11 @@
 						<p class="footer__info">hello@oboa.com</p>
 						<div class="footer__family">
 							<button type="button" class="footer__family-btn">
-								Family Site 
-								<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M9 3.5V15.5M15 9.5H3" stroke="black" stroke-width="2" stroke-linecap="square"/>
+								Family Site
+								<svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="M9 3.5V15.5M15 9.5H3" stroke="black" stroke-width="2"
+										stroke-linecap="square" />
 								</svg>
 							</button>
 							<ul class="footer__family-list">
@@ -674,6 +822,186 @@
 	<!-- //E:wrap -->
 	<script>
 		$(function () {
+
+			// Register ScrollTrigger plugin once
+			if (gsap && ScrollTrigger) {
+				gsap.registerPlugin(ScrollTrigger);
+			}
+
+			// === CountUp ===
+			[ 
+				{ id: 'count01', endVal: 15, opts: { enableScrollSpy: true, suffix: '+' } },
+				{ id: 'count02', endVal: 400, opts: { enableScrollSpy: true, suffix: '+' } },
+				{ id: 'count03', endVal: 15, opts: { enableScrollSpy: true, suffix: '+' } },
+				{ id: 'count04', endVal: 4.9, opts: { enableScrollSpy: true, decimalPlaces: 1 } }
+			].forEach(cfg => {
+				const c = new countUp.CountUp(cfg.id, cfg.endVal, cfg.opts);
+				if (c.error) console.error(c.error);
+			});
+
+			// === AI Section ===
+			gsap.to(".ai__image-mask", {
+				width: 160,
+				ease: "none",
+				scrollTrigger: {
+					trigger: ".section.ai",
+					start: "top 50%",
+					end: "+=400",
+					scrub: true
+				}
+			});
+
+			// === Studio Section ===
+			gsap.to(".studio__tit", {
+				xPercent: -170,
+				x: "-20vw",
+				ease: "none",
+				scrollTrigger: {
+					trigger: ".studio",
+					start: "top 30%",
+					end: "+=500",
+					scrub: true
+				}
+			});
+
+			// === Commerce Section ===
+			gsap.timeline({
+					scrollTrigger: {
+						trigger: ".commerce",
+						start: "top top",
+						end: "+=1000",
+						scrub: true,
+						pin: true,
+						anticipatePin: 1
+					}
+				})
+				.fromTo(".commerce__center", {
+					width: "100vw",
+					height: "100vh"
+				}, {
+					width: "530px",
+					height: "600px",
+					ease: "power2.out"
+				})
+				.to(".commerce", {
+					backgroundColor: "#fff",
+					ease: "none"
+				}, 0)
+				.to([".commerce .sec__label", ".commerce .commerce__tit", ".commerce .more-btn"], {
+					opacity: 1,
+					y: 0,
+					ease: "power1.out",
+					stagger: 0.1
+				}, 0);
+
+			// === Education Section ===
+			$('.education .split .bx').each(function () {
+				const $box = $(this);
+				const count = 30;
+				const minPercent = 1;
+				for (let i = 0; i < count; i++) {
+					$box.append('<div></div>');
+				}
+				const $children = $box.children();
+				let weights = Array.from({
+					length: count
+				}, (_, i) => {
+					const progress = (i + 1) / count;
+					const randomPower = Math.pow(Math.random(), 0.7);
+					const wobble = Math.sin(i * 0.5 + Math.random() * 2) * 0.5 + 1;
+					return progress * randomPower * wobble;
+				});
+				const totalWeight = weights.reduce((a, b) => a + b, 0);
+				const scaledPercents = weights.map(w => (w / totalWeight) * (100 - minPercent * count));
+				$children.each(function (i) {
+					$(this).css('width', (scaledPercents[i] + minPercent) + '%');
+				});
+			});
+
+			gsap.timeline({
+					scrollTrigger: {
+						trigger: '.education',
+						start: 'top bottom',
+						toggleActions: 'play none none reverse',
+						onEnter: () => ScrollTrigger.refresh(),
+					}
+				})
+				.to('.education .split .bx:nth-child(1) div', {
+					scaleX: 0,
+					duration: 0.4,
+					stagger: 0.05
+				}, '-=100%')
+				.to('.education .split .bx:nth-child(4) div', {
+					scaleX: 0,
+					duration: 0.4,
+					stagger: 0.05
+				}, '-=90%')
+				.from('.education .inner-padding', {
+					yPercent: 130,
+					duration: 0.4,
+					stagger: 0.1
+				}, '-=90%')
+				.to('.education .split .bx:nth-child(5) div', {
+					scaleX: 0,
+					duration: 0.4,
+					stagger: 0.1
+				}, '-=90%')
+				.to('.education .split .bx:nth-child(3) div', {
+					scaleX: 0,
+					duration: 0.4,
+					stagger: 0.05
+				}, '-=100%')
+				.to('.education .split .bx:nth-child(2) div', {
+					scaleX: 0,
+					duration: 0.4,
+					stagger: 0.1
+				}, '-=90%');
+
+			// === Review Swiper Section ===
+			const multiplier = {
+				translate: 0.1,
+				rotate: 0.01
+			};
+			new Swiper('.review__swiper', {
+				slidesPerView: 'auto',
+				spaceBetween: 100,
+				centeredSlides: true,
+				loop: true,
+				grabCursor: true,
+				initialSlide: 2,
+				pagination: {
+					el: '.review__pagination',
+					clickable: true
+				}
+			});
+
+			let lastFrame = 0;
+
+			function calculateWheel() {
+				const now = performance.now();
+				if (now - lastFrame < 16) return; // ~60fps throttle
+				lastFrame = now;
+
+				document.querySelectorAll('.review__swiper .inner').forEach(slide => {
+					const rect = slide.getBoundingClientRect();
+					const r = window.innerWidth * 0.5 - (rect.x + rect.width * 0.5);
+					let ty = Math.abs(r) * multiplier.translate - rect.width * multiplier.translate;
+					ty = Math.max(0, ty);
+					slide.style.transform = `translate(0, ${ty}px) rotate(${-r * multiplier.rotate}deg)`;
+					slide.style.transformOrigin = r < 0 ? 'left top' : 'right top';
+				});
+			}
+
+			function raf() {
+				requestAnimationFrame(raf);
+				calculateWheel();
+			}
+			raf();
+
+			window.addEventListener('load', () => {
+				ScrollTrigger.refresh();
+			});
+
 
 		})
 	</script>
