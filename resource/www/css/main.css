@@ -1,4 +1,6 @@
 /********** 공통 **********/
+.main { background-color: #fff; }
+
 .section { padding: 10rem 0; }
 
 .sec__head { flex-shrink: 0; width: 370px; padding-right: 4rem; }
@@ -35,18 +37,26 @@
 .video { width: 100%; height: 100%; object-fit: cover; }
 
 
+
 /********** 메인 비주얼 **********/
-.main-vi { height: 100vh; padding: 10rem 0; background-color: #000; }
-.main-vi__inner-padding { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
-.main-vi__top {  }
+.main-vi { position: relative; height: 100vh; padding: 10rem 0; background-color: #000; overflow: hidden; }
+.main-vi__inner-padding { position: relative; z-index: 0; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.main-vi__top { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; }
 .main-vi__slogan { display: flex; justify-content: center; gap: 4rem; margin-bottom: 3rem; }
-.main-vi__slogan-line { display: flex; }
-.main-vi__slogan-one { font-family: var(--head-font); font-weight: 700; font-size: 25rem; color: #fff; }
-.main-vi__slogan-icon {  }
-.main-vi__slogan-word { font-family: var(--head-font); font-weight: 700; font-size: 25rem; color: #fff; }
-.main-vi__desc { line-height: 1.5; color: #fff; text-align: center; }
-.main-vi__desc--ko { font-size: 2.4rem; }
+.main-vi__slogan-line { display: flex; align-items: center; gap: 2rem; }
+.main-vi__slogan-icon { display: block; width: 180px; height: 180px; }
+.main-vi__slogan-icon svg { width: 180px; height: 180px; }
+.main-vi__slogan-word { display: flex; align-items: center; line-height: 19rem; font-family: var(--head-font); font-weight: 400; font-size: 25rem; color: #fff; }
+.main-vi__slogan-word em { display: inline-block; margin: 0 -2px; }
+.main-vi__slogan-word .char--reveal { display: inline-block; width: 0; opacity: 0; overflow: hidden; vertical-align: bottom; }
+.main-vi__desc { line-height: 1.5; color: #fff; text-align: center; opacity: 0; transform: translateY(30px); }
+.main-vi__desc--ko { margin-top: 50px; font-size: 2.4rem; }
+.main-vi__bottom { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 .main-vi__desc--en { font-family: var(--head-font); font-size: 2.2rem; }
+.main-vi__underline { display: inline-block; width: 0; height: 2px; background: #fff; vertical-align: middle; }
+.main-vi__bg { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+#main-vi__container { width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+#main-vi__container canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: auto; overflow: hidden; }
 
 /********** philosophy **********/
 .philosophy { background: var(--gray-f2); }
@@ -96,20 +106,18 @@
 .commerce { padding: 0; background-color: #000; transition: background-color 0.3s ease-out; }
 .commerce__inner-padding { position: relative; height: 100vh; padding-top: 10rem; padding-bottom: 10rem; }
 .commerce__tit { position: relative; z-index: 2; color: #fff; mix-blend-mode: difference; }
-/* .commerce__tit--white { position: absolute; top: 0; right: 0; z-index: 2; color: #fff; clip-path: polygon(-0.11% 2px, 7.04% 3px, 7.04% 100.41%, 0.03% 100.42%); } */
 .commerce__right { position: relative; text-align: right; }
 .commerce__center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100vw; height: 100vh; z-index: 1; pointer-events: none; }
 .commerce__media { width: 100%; height: 100%; }
 .commerce .sec__label,
 .commerce .commerce__tit,
-.commerce .more-btn {
-  opacity: 0;
-}
+.commerce .more-btn { opacity: 0; }
 
 /********** education **********/
 .education { position: relative; display: flex; align-items: flex-end; min-height: 700px; overflow: hidden; }
+.education__inner-padding { position: relative; z-index: 2; }
 .education__tit { color: #fff; mix-blend-mode: difference; }
-.education__media { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; }
+.education__media { position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100%; }
 .split { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; }
 .split .bx { width: 100%; height: 20%; display: flex; }
 .split .bx > div { background-color: #000; margin-top: -1%; }
@@ -143,9 +151,8 @@
 
 /********** vision **********/
 .vision { position: relative; height: 100vh; overflow: hidden; }
+.vision__inner-padding { position: relative; z-index: 1; }
 .vision__tit { justify-content: center; margin-bottom: 50px; color: #fff; text-align: center; }
-.vision__media { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background-color: #000; }
-.vision__video { opacity: .3; }
 .vision__circle { position: relative; z-index: 1; width: 1100px; height: 1100px; margin: 0 auto; }
 .vision__center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .vision__center img { animation: rotateCenter 30s linear infinite; }
@@ -163,7 +170,9 @@
 .vision__track--3 .vision__item:nth-child(2) { bottom: 74px; right: 30px; }
 .vision__track--3 .vision__item:last-child { top: 74px; left: 30px; }
 .vision__item { position: absolute; display: flex; align-items: center; justify-content: center; width: 100px; height: 100px; background: rgba(237, 228, 243, 0.05); border: 1px solid var(--white10); border-radius: 100%; backdrop-filter: blur(10px); box-shadow: 1px 10px 12px 0px rgba(255, 255, 255, 0.02), 0px -5px 17px 0px rgba(255, 255, 255, 0.15) inset;  }
-.vision__gradient { position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 0; }
+.vision__gradient { position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; }
+.vision__media { position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100%; background-color: #000; }
+.vision__video { opacity: .3; }
 @keyframes rotateTrack {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to { transform: translate(-50%, -50%) rotate(360deg); }
@@ -171,14 +180,16 @@
 
 
 /********** skill **********/
-.skill { position: relative; min-height: 100vh; text-align: center; }
+.skill { position: relative; min-height: 100vh; text-align: center; background-color: #000; overflow: hidden; }
+.skill__inner-padding { position: relative; z-index: 0; }
 .skill__tit { margin: 50px 0; color: #fff; }
-.skill__media { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background-color: #000; }
-.skill__video { opacity: .6; }
-.skill__stack { position: absolute; bottom: 0; }
-.skill__item { display: inline-flex; align-items: center; gap: 10px; padding: 8px 26px 8px 8px; font-family: var(--head-font); font-weight: 400; font-size: 2.2rem; color: #fff; background-color: #222; border-radius: 50px; box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25); backdrop-filter: blur(2px); }
-.skill__item i { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #000; border-radius: 100%; }
-.skill__item i img { max-width: 30px; }
+/* .skill__media { position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100%; background-color: #000; }
+.skill__video { opacity: .6; } */
+.skill__media { display: none; }
+.skill__bg { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+#skill__container { width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+#skill__container canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: auto; overflow: hidden; }
+
 
 /********** notice **********/
 .notice__inner-padding { display: flex; }

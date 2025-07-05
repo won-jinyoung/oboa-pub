@@ -5,7 +5,7 @@ body { overflow-x: hidden; }
 #wrap { overflow-x: hidden; }
 .inner-padding { width: 100%; max-width: 100%; padding: 0 34px; }
 
-.header { position: fixed; top: 0; left: 0; z-index: 1; width: 100%; padding: 15px 0; }
+.header { position: fixed; top: 0; left: 0; z-index: 1; width: 100%; padding: 15px 0; mix-blend-mode: difference; transform: translateY(-30px); opacity: 0; }
 .header__inner-padding { display: flex; justify-content: space-between; align-items: center; }
 
 .header__logo {  }
